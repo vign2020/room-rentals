@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/room-rentals/static/css/main.f52db7d4.css",
+    "main.js": "/room-rentals/static/js/main.7f176a9b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/room-rentals/static/js/787.28cb0dcd.chunk.js",
+    "static/media/image3.jpg": "/room-rentals/static/media/image3.16f9bd476c94f326cef1.jpg",
+    "static/media/image2.jpg": "/room-rentals/static/media/image2.a6704c45a040c3ecc538.jpg",
+    "static/media/image4.jpg": "/room-rentals/static/media/image4.da85f7f059640397aca0.jpg",
+    "static/media/image5.jpg": "/room-rentals/static/media/image5.df703d293bec0cf44b89.jpg",
+    "static/media/image1.jpg": "/room-rentals/static/media/image1.03448f2100f986681421.jpg",
+    "static/media/background-home.jpg": "/room-rentals/static/media/background-home.4d782f4fdcb9b6e377d4.jpg",
+    "static/media/narendra.jpg": "/room-rentals/static/media/narendra.33dbcc72a348b2cb5d71.jpg",
+    "static/media/ted.jpg": "/room-rentals/static/media/ted.eadf4797b75b46b76b01.jpg",
+    "static/media/wiz.jpg": "/room-rentals/static/media/wiz.8a121f6d083fe31152ad.jpg",
+    "index.html": "/room-rentals/index.html",
+    "main.f52db7d4.css.map": "/room-rentals/static/css/main.f52db7d4.css.map",
+    "main.7f176a9b.js.map": "/room-rentals/static/js/main.7f176a9b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/room-rentals/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f52db7d4.css",
+    "static/js/main.7f176a9b.js"
+  ]
+}
