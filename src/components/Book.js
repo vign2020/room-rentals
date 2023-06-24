@@ -25,19 +25,13 @@ export default function Book(props) {
    useEffect(() => {
     const updatedItems = item.filter((i) => i.price < slider && Math.floor(i.stars)==Math.floor(Stars));
     setItemUpdate(updatedItems);
-
-    
-   
-
   }, [slider, item,Stars]);
    
-  useEffect(()=>{
-    
-  })
+ 
 
   return (
-    <>
-        <h1>showing {itemUpdate.length} results</h1>
+    <div className='book-container-wrapper'>
+        <h1 className='itemUpdatelength'>showing {itemUpdate.length} results</h1>
         <div className="FilterBy">
             <h3>Filter by:</h3>
             <div className="FilterByBudget">
@@ -49,22 +43,22 @@ export default function Book(props) {
         <input type="radio" id="option1" name="mcq" value={1} onClick={(e)=>{
           Setstars(e.target.value)
         }}/>
-        <label for="option1">1 Stars</label>
+        <label for="option1">1 Stars</label><br />
 
         <input type="radio" id="option2" name="mcq" value={2} onClick={(e)=>{
           Setstars(e.target.value)
         }}/>
-        <label for="option2">2 Stars</label>
+        <label for="option2">2 Stars</label><br />
 
         <input type="radio" id="option3" name="mcq" value={3} onClick={(e)=>{
           Setstars(e.target.value)
         }}/>
-        <label for="option3">3 Stars</label>
+        <label for="option3">3 Stars</label><br />
 
         <input type="radio" id="option4" name="mcq" value={4} onClick={(e)=>{
           Setstars(e.target.value)
         }}/>
-        <label for="option4">4 Stars</label>
+        <label for="option4">4 Stars</label><br />
 
         <input type="radio" id="option5" name="mcq" value={5} onClick={(e)=>{
           Setstars(e.target.value)
@@ -91,12 +85,14 @@ export default function Book(props) {
     {
   itemUpdate.map((i,index)=>{
     let destination=`/destination?name=${i.name}`;
+    const maps_link=`/maps?lat=${i.lat}&long=${i.long}`;
 
-    return(
+    return(  
         <div className="new-container-sub">
-          
+           {/* <h1>showing {itemUpdate.length} results</h1> */}
             <img src={i.image} height="200px" width="200px"/><br />
-            <a href="/maps">View location</a><br />
+            <p>{i.address}</p>
+            <Link to={maps_link}>View location</Link><br />
             <h1>{i.name}</h1>
             <h3>{i.city}</h3>
             <h3> ₹ {i.price}</h3>
@@ -107,12 +103,14 @@ export default function Book(props) {
       </Link>
              
         </div>
+    
+ 
     )
   })
 }
     </div>
     
-    </>
+    </div>
 
   )
 }

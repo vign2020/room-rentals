@@ -17,17 +17,18 @@ export default function Destination(props) {
     const [styles,Setstyles]=useState('none')
 
     return(
-        <div>
-            <h1>{props.dest}</h1>
+        <div className='destination-images'>
+            <h1 className='destination-images-heading'>{props.dest}</h1>
             {
   HotelsImages.filter((items) => items.name === props.dest).map((item) => (
     <div className="image-container">
       {
         item.img.map((image, imageIndex) => (
-          <img src={image} key={imageIndex} alt="Hotel Image" height={400} width={400} onClick={()=>{
-
-            Setstyles('block')
-          }}/>
+          <div className="destination-images-sub">
+               <img src={image} key={imageIndex} alt="Hotel Image" className={`image-container-image-${imageIndex}`} id='image-container-img'  onClick={()=>{Setstyles('block')}}/>
+          </div>
+             
+          
         ))
       }
     </div>

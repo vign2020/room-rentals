@@ -19,7 +19,8 @@ const hotels = [
       address: "123 Street",
       price: 2000,
       stars:3,
-      customers:234
+      customers:234,
+      
     },
     {
       image:image2,
@@ -109,10 +110,12 @@ const hotels = [
         image:image1,
         name: "Hotel Chicago streets",
         city: "Chicago",
-        address: "789 Street",
         price: 2400,
         stars:2.89,
-        customers:456
+        customers:456,
+        lat:41.59070534116764,
+        long:-87.37084953127948,
+        address:"1140 Marshall Street, Gary, Indiana 46404, United States"
       },
       {   
         image:image2,
@@ -125,19 +128,22 @@ const hotels = [
       },
       {  
         image:image1,
-        name: "Hotel Chicago Bitches",
+        name: "Hotel Chicago horses",
         city: "Chicago",
-        address: "654 Street",
         price: 4480,
         stars:3,
-        customers:456
+        customers:456,
+        lat:41.72408922900181,
+        long:-87.98059074221698 ,
+        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States"
+        
       },
 
   ];
   //purely for rendering images
   const HotelsImages=[
     {
-      name:"Hotel Chicago Bitches",
+      name:"Hotel Chicago horses",
       img:[
         image1,
         image2,
@@ -170,7 +176,7 @@ const hotels = [
   ]
   const HotelReviews=[
     {
-      name1:"Hotel Chicago Bitches",
+      name1:"Hotel Chicago horses",
       reviews:[
         {
           name:"felix",

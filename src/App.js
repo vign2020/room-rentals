@@ -18,12 +18,18 @@ export default function App() {
 
 
   const [searchParams] = useSearchParams();
+  //redirection from home route
   const days = searchParams.get('days');
   const place = searchParams.get('place');
   const data= searchParams.get('FilterHotels')
 
   const decodedArray = JSON.parse(decodeURIComponent(data));
 
+
+  //redirections from book route
+  
+  const lat = searchParams.get('lat');
+  const long = searchParams.get('long');
 
 
   const dicto=[
@@ -62,12 +68,12 @@ export default function App() {
     <Routes>
      
      <Route path="/about" element={<About curr_desc={curr_desc} curr_title={mod_currentRoute} />}/>
-     <Route path="/flats" element={<Flats curr_desc={curr_desc} curr_title={mod_currentRoute}/>}/>
+     <Route path="/flats" element={<Flats curr_desc={curr_desc} curr_title={mod_currentRoute} />}/>
      <Route path="/Testimonials" element={<Testimonials curr_desc={curr_desc} curr_title={mod_currentRoute}/>}/>
      <Route path="/" element={<Home />} />
      <Route path="/book" element={<Book days={days} place={place} FilterHotels={decodedArray}/>}/>
      <Route path="/destination" element={<Destination dest={dest}/>} />
-     <Route path="/maps" element={<Maps/>}/>
+     <Route path="/maps" element={<Maps lat={lat} long={long}/>}/>
     
    </Routes>
  
