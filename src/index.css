@@ -477,3 +477,68 @@ grid-column-end: 4;
   font-weight: bold;
 
 }
+
+
+/* FOR INCREMENT BUTTON */
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  /* border:2px solid grey; */
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f2f2f2; */
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e0e0e0;
+}
+
+.increment-button {
+  border-radius: 0 4px 4px 0;
+}
+
+.decrement-button {
+  border-radius: 4px 0 0 4px;
+}
+
+
+/* FOR TAGSS */
+.select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* CSS for the cross button */
+.select .tag , .tag{
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px;
+  background-color: #eee;
+  border-radius: 4px;
+  border:2px solid red;
+}
+.tag:hover{
+  cursor: pointer;
+}
+.select .tag .close {
+  display: inline-block;
+  margin-left: 5px;
+  color: red;
+  cursor: pointer;
+}
+.select{ 
+  border:2px solid yellow;
+}

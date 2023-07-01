@@ -20,6 +20,8 @@ const hotels = [
       price: 2000,
       stars:3,
       customers:234,
+      bedrooms:2,
+  
       
     },
     {
@@ -29,7 +31,8 @@ const hotels = [
       address: "456 Street",
       price: 4000,
       stars:3,
-      customers:234
+      customers:234,
+      bedrooms:2
 
     },
     {  
@@ -39,7 +42,8 @@ const hotels = [
       address: "789 Street",
       price: 5000,
       stars:3,
-      customers:244
+      customers:244,
+      bedrooms:3
 
     },
     {  
@@ -49,7 +53,8 @@ const hotels = [
       address: "321 Street",
       price: 7000,
       stars:3.2,
-      customers:149
+      customers:149,
+      bedrooms:4
     },
     {   
       image:image5,
@@ -58,7 +63,8 @@ const hotels = [
       address: "654 Street",
       price: 3000,
       stars:4.3,
-      customers:349
+      customers:349,
+      bedrooms:4
 
     },
     {      
@@ -68,7 +74,8 @@ const hotels = [
         address: "123 Street",
         price: 9000,
         stars:4.5,
-        customers:789
+        customers:789,
+        bedrooms:5
       },
       {   
         image:image2,
@@ -77,7 +84,8 @@ const hotels = [
         address: "456 Street",
         price: 2000,
         stars:3.9,
-        customers:456
+        customers:456,
+        bedrooms:1
       },
       {   
         image:image3,
@@ -86,7 +94,8 @@ const hotels = [
         address: "789 Street",
         price: 2000,
         stars:3,
-        customers:156
+        customers:156,
+        bedrooms:1
       },
       {   
         image:image4,
@@ -95,7 +104,8 @@ const hotels = [
         address: "321 Street",
         price: 7300,
         stars:3,
-        customers:956
+        customers:956,
+        bedrooms:2
       },
       {   
         image:image5,
@@ -104,7 +114,8 @@ const hotels = [
         address: "654 Street",
         price: 6000,
         stars:2.78,
-        customers:456
+        customers:456,
+        bedrooms:2
       },
       {   
         image:image1,
@@ -115,7 +126,8 @@ const hotels = [
         customers:456,
         lat:41.59070534116764,
         long:-87.37084953127948,
-        address:"1140 Marshall Street, Gary, Indiana 46404, United States"
+        address:"1140 Marshall Street, Gary, Indiana 46404, United States",
+        bedrooms:2
       },
       {   
         image:image2,
@@ -124,7 +136,8 @@ const hotels = [
         address: "321 Street",
         price: 1200,
         stars:3,
-        customers:456
+        customers:456, 
+        bedrooms:3
       },
       {  
         image:image1,
@@ -135,7 +148,8 @@ const hotels = [
         customers:456,
         lat:41.72408922900181,
         long:-87.98059074221698 ,
-        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States"
+        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States",
+        bedrooms:3
         
       },
 
