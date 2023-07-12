@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
+import '../new.css';
 
 
 import image1 from '../images/image1.jpg';
@@ -14,18 +15,32 @@ export default function Book(props) {
   let item_update = [];
   console.log(`item is ${item}`);
 
-  const [slider, Setslider] = useState(5000);
+  const [slider, Setslider] = useState();
   const [itemUpdate, setItemUpdate] = useState([]);
-  const [Stars, Setstars] = useState(2);
+  const [Stars, Setstars] = useState();
   const [inc,Setinc]=useState(1);
-  const [check,Setcheck]=useState([]);
+  const [check,Setcheck]=useState(["hills"]);
 
-  useEffect(() => {
-    const updatedItems = item.filter(
-      (i) => i.price < slider && Math.floor(i.stars) <= Math.floor(Stars) && i.bedrooms===inc
-    );
-    setItemUpdate(updatedItems);
-  }, [slider, item, Stars , inc]);
+
+  useEffect(()=>{
+        if(slider===undefined || Stars===undefined){
+            setItemUpdate([...item])
+        }
+
+        else{
+
+        
+    // for(let i=0; i<item.length; ++i){
+      for(let j of check){
+
+        const filteredItems = item.filter((item) => item.tags.includes(j) && item.price < slider && Math.floor(item.stars) <= Math.floor(Stars) && item.bedrooms===inc);
+
+        setItemUpdate(filteredItems)
+      }
+
+        }
+
+  },[check,slider, item, Stars , inc])
 
 
 
@@ -34,6 +49,7 @@ export default function Book(props) {
     updatedArray.splice(index, 1);
     Setcheck(updatedArray);
   };
+
   const SetTags=(tags)=>{
     if (!check.includes(tags)) {
       Setcheck([...check, tags]);
@@ -41,14 +57,13 @@ export default function Book(props) {
   }
 
 
+
     return (
     <div className="book-container-wrapper">
         <h1 className="itemUpdatelength">Showing {itemUpdate.length} results</h1>
         <div className="FilterBy">
           <h3>Filter by:</h3>
-          <div className="FilterByBudget">
-            {/* pass */}
-          </div>
+      
 
           <div className="FilterByStars">
             <h3>Ratings</h3>
@@ -73,7 +88,7 @@ export default function Book(props) {
               onClick={(e) => {
                 Setstars(e.target.value);
               }}
-              checked
+            
             />
             <label htmlFor="option2">2 Stars</label>
             <br />
@@ -133,7 +148,7 @@ export default function Book(props) {
 
 
           {/* for the increment button */}
-          <h3>Sort By number of Bedrooms</h3>
+          <h3 className='SortByBedrooms'>Sort By number of Bedrooms</h3>
           <div class="button-container">
             
         <div class="button decrement-button" onClick={()=>{
@@ -158,8 +173,8 @@ export default function Book(props) {
       <div class="tag" id="forest" onClick={()=>SetTags('forest')}>
         <span>forest</span>
       </div>
-      <div class="tag" id="romance"  onClick={()=>SetTags('romance')}>    
-        <span>romance</span>
+      <div class="tag" id="relaxing"  onClick={()=>SetTags('relaxing')}>    
+        <span>relaxing</span>
       </div>
       <div class="tag" id="pilgrimage" onClick={()=>SetTags('pilgrimage')} >
         <span>pilgrimage</span>
@@ -189,6 +204,7 @@ export default function Book(props) {
           {itemUpdate.map((i, index) => {
             let destination = `/destination?name=${i.name}`;
             const maps_link = `/maps?lat=${i.lat}&long=${i.long}`;
+            
 
             return (
               <div className="new-container-sub">
@@ -202,6 +218,24 @@ export default function Book(props) {
                 <h3>{i.city}</h3>
                 <h3>₹ {i.price}</h3>
                 <h3>{i.bedrooms} Rooms</h3>
+                <h3>popular tags</h3>
+                <div className="tags-container-inner">
+                {
+                 
+                  i.tags.map((j,index2)=>{
+                    
+                    return (
+                    <div className={`tags-container-inner-${index2}`}>
+                             <h3 className='tags'>{j}</h3>
+                    </div>
+                 
+                    )
+                    
+                  })
+                }
+
+                </div>
+            
                 <Link to={destination}>
                   <button>Go to Destination</button>
                 </Link>

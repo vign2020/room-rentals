@@ -54,6 +54,8 @@
   background-color: rgb(1, 1, 112);
   padding:10px;
 
+
+
 }
 .book{
  background-color: rgb(1, 1, 112);
@@ -329,16 +331,25 @@ grid-column-end: 4;
   /* display: flex;
   justify-content: flex-start; */
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
 }
 .itemUpdatelength{
   /* border:2px solid #febb02; */
-  grid-column: span 3;
+  grid-column: span 4;
   margin-top:6px;
+  margin-bottom: 10px;
+}
+.new-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ 
 }
 .new-container-sub{
   border:2px solid #febb02;
   margin:10px;
+ 
+
 }
 .new-container-sub img{
   border:3px solid #febb02;
@@ -353,19 +364,31 @@ grid-column-end: 4;
 
 
 .new-container{
-  grid-column-start:2;
+  grid-column-start:3;
   grid-column-end: 4;
 }
 .FilterBy{
   border: 2px solid #febb02;
-  margin-top:10px;
   
 }
 .FilterByStars{
   /* border:2px solid green; */
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-size: 20px;
 
+}
+.slider-container{
+  margin-bottom: 40px;
+}
+.slider-container h3{
+   font-size: 20px;
+}
+.slider-container input{
+  width: 50%;
+}
+.SortByBedrooms{
+  font-size:20px;
 }
 
 /* modal styles */
@@ -443,6 +466,7 @@ grid-column-end: 4;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  border:2px solid red;
 }
 
 .destination-images-sub {
@@ -485,6 +509,7 @@ grid-column-end: 4;
   align-items: center;
   justify-content: space-between;
   width: 150px;
+  margin-bottom:20px;
   /* border:2px solid grey; */
 }
 
@@ -525,10 +550,12 @@ grid-column-end: 4;
 .select .tag , .tag{
   display: inline-block;
   margin-right: 5px;
+  margin-bottom: 5px;
   padding: 5px;
   background-color: #eee;
   border-radius: 4px;
-  border:2px solid red;
+  border:2px solid #febb02;
+  
 }
 .tag:hover{
   cursor: pointer;
@@ -536,9 +563,33 @@ grid-column-end: 4;
 .select .tag .close {
   display: inline-block;
   margin-left: 5px;
-  color: red;
+  
   cursor: pointer;
 }
 .select{ 
   border:2px solid yellow;
+}
+
+
+/* styling tags */
+
+.tags{
+  border:1px solid #febb02;
+  width:150px;
+  display: flex;
+  justify-content: center;
+  margin-right:5px;
+  border-radius: 16px;
+
+ 
+}
+.tags:hover{
+  background-color: #966e00;
+  cursor: pointer;
+  color:white;
+}
+.tags-container-inner{
+  display: flex;
+
+  /* justify-content: center; */
 }

@@ -21,6 +21,7 @@ const hotels = [
       stars:3,
       customers:234,
       bedrooms:2,
+      tags:""
   
       
     },
@@ -115,7 +116,8 @@ const hotels = [
         price: 6000,
         stars:2.78,
         customers:456,
-        bedrooms:2
+        bedrooms:2,
+        tags:["hills"]
       },
       {   
         image:image1,
@@ -127,7 +129,8 @@ const hotels = [
         lat:41.59070534116764,
         long:-87.37084953127948,
         address:"1140 Marshall Street, Gary, Indiana 46404, United States",
-        bedrooms:2
+        bedrooms:2,
+        tags:["hills","relaxing"]
       },
       {   
         image:image2,
@@ -137,7 +140,8 @@ const hotels = [
         price: 1200,
         stars:3,
         customers:456, 
-        bedrooms:3
+        bedrooms:3,
+        tags:["mountains","forest"]
       },
       {  
         image:image1,
@@ -149,9 +153,67 @@ const hotels = [
         lat:41.72408922900181,
         long:-87.98059074221698 ,
         address:"9131 91st Place, Hickory Hills, Illinois 60457, United States",
-        bedrooms:3
+        bedrooms:3,
+        tags:["relaxing","forest","mountains","pilgrimage"]
         
       },
+      {  
+        image:image4,
+        name: "Hill palace",
+        city: "Chicago",
+        price: 4480,
+        stars:3,
+        customers:456,
+        lat:41.72408922900181,
+        long:-87.98059074221698 ,
+        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States",
+        bedrooms:3,
+        tags:["forest","pilgrimage"]
+        
+      },
+      {  
+        image:image2,
+        name: "Gran Chicago inn",
+        city: "Chicago",
+        price: 4480,
+        stars:3,
+        customers:456,
+        lat:41.72408922900181,
+        long:-87.98059074221698 ,
+        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States",
+        bedrooms:3,
+        tags:["Beach","pilgrimage"]
+        
+      },
+      {  
+        image:image3,
+        name: "Camellia heights",
+        city: "Chicago",
+        price: 4480,
+        stars:3,
+        customers:456,
+        lat:41.72408922900181,
+        long:-87.98059074221698 ,
+        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States",
+        bedrooms:3,
+        tags:["relaxing","forest","mountains","pilgrimage","beach","hills"]
+        
+      },
+      {  
+        image:image2,
+        name: "Bella Vista Homestay",
+        city: "Chicago",
+        price: 4480,
+        stars:3,
+        customers:456,
+        lat:41.72408922900181,
+        long:-87.98059074221698 ,
+        address:"9131 91st Place, Hickory Hills, Illinois 60457, United States",
+        bedrooms:3,
+        tags:["beach"]
+        
+      },
+
 
   ];
   //purely for rendering images
