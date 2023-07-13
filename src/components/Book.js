@@ -59,8 +59,11 @@ export default function Book(props) {
 
 
     return (
+      <>
+      
+      <h1 className="itemUpdatelength">Showing {itemUpdate.length} results</h1>
     <div className="book-container-wrapper">
-        <h1 className="itemUpdatelength">Showing {itemUpdate.length} results</h1>
+        
         <div className="FilterBy">
           <h3>Filter by:</h3>
       
@@ -208,18 +211,32 @@ export default function Book(props) {
 
             return (
               <div className="new-container-sub">
-                <img src={i.image} height="200px" width="200px" />
+                <div className="new-container-sub-imagewrapper">
+
+                  <div className="new-container-sub-image-text-wrapper">
+                  <img src={i.image} />
+                  <p>{i.address}</p>
+                  </div>
+                 
+                <Link to={maps_link}>View location</Link> <br />
+
+                <Link to={destination}>
+                  <button>Go to Destination</button>
+                </Link>
+
+                </div>
+                
                 <br />
-                <p>{i.address}</p>
-                <Link to={maps_link}>View location</Link>
+               
                 <br />
-                <h1>{i.name}</h1>
-                <h3>{i.stars} ⭐</h3>
-                <h3>{i.city}</h3>
-                <h3>₹ {i.price}</h3>
-                <h3>{i.bedrooms} Rooms</h3>
-                <h3>popular tags</h3>
-                <div className="tags-container-inner">
+                <div className="new-container-sub-text">
+                  <h1>{i.name}</h1>
+                  <h3>{i.stars} ⭐</h3>
+                  <h3>{i.city}</h3>
+                  <h3>₹ {i.price}</h3>
+                  <h3>{i.bedrooms} Rooms</h3>
+
+                  <div className="tags-container-inner">
                 {
                  
                   i.tags.map((j,index2)=>{
@@ -235,15 +252,14 @@ export default function Book(props) {
                 }
 
                 </div>
-            
-                <Link to={destination}>
-                  <button>Go to Destination</button>
-                </Link>
+
+                </div>                
               </div>
             );
           })}
         </div>
       </div>
+      </>
     );
   };
 
